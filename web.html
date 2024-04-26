@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonaryStudios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script> <!-- You can create a CSS file for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #444;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section#gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .artwork {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .artwork img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .artwork p {
+            margin: 10px 0;
+        }
+
+        /* Sticky footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DragonaryStudios</h1>
+    </header>
+
+
+    <main>
+        <section id="home"></section>
+        <h1>DragonaryStudios</h1>
+        <h3>DragonaryStudios is a small art and comic studio created in july of 2022</h3>
+
+        <section id="gallery">
+            <div class="artwork">
+                <img src="WeChat Image_20230908151704.jpg" alt="admirals">
+                <p>SpongePiece</p>
+            </div>
+
+            <div class="artwork">
+                <img src="WeChat Image_20230908151911.jpg" alt="kira">
+                <p>kira</p>
+            </div>
+            <div class="artwork">
+                <img src="WeChat Image_20230908154906.jpg" alt="Nami">
+                <p>Nami</p>
+            </div>
+            <div class="artwork">
+                <img src="WeChat Image_20230908155105.jpg" alt="wanted">
+                <p>Wanted</p>
+            </div>
+    </main>
+
+    <footer>
+        &copy; 2024 DragonaryStudios
+    </footer>
+</body>
+</html>
