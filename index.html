@@ -6,40 +6,52 @@
     <title>About Me</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #fdfdfd;
+            color: #444;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            transition: all 0.3s ease;
         }
         header {
-            background: #862b29;
+            background: linear-gradient(90deg, #862b29, #a84543);
             color: white;
             padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav {
-            background: #ddd;
-            padding: 0.5rem 0;
+            background: #f5f5f5;
+            padding: 1rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
             color: #862b29;
-            cursor: pointer;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #862b29;
+            color: white;
         }
+        
         section {
             display: none;
             padding: 2rem;
             text-align: center;
-            flex: 1;
+            animation: fadeIn 0.5s ease-in-out;
         }
         #hello-section {
             display: flex;
@@ -49,12 +61,16 @@
             font-size: 4rem;
             font-weight: bold;
             color: #862b29;
+            background: #f9e7e7;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
         section img {
             border-radius: 50%;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
             background: #333;
@@ -62,13 +78,31 @@
             padding: 1rem 0;
             text-align: center;
             margin-top: auto;
+            font-size: 0.9rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>About Me</h1>
-        <p>Welcome to my website!</p>
+        <p>Welcome to my website</p>
     </header>
     <nav>
         <a onclick="showSection('about')">About Me</a>
@@ -79,40 +113,39 @@
         HELLO
     </section>
     <section id="about">
-        <h2>HELLO</h2>
+        <h2>About Me</h2>
         <img src="https://i.pinimg.com/originals/14/fc/03/14fc030a45875ea3021063e18d433ea5.png" alt="My Picture">
-        <p>Yo wsp ppl</p>
-        <p>im a secondary student in a certain school in sg </p>
-        <p>my birthday is march 17</p>
-        <p>my fav song is prob free loop by daniel powter</p>
-        <p>i know a bit of guitar and drums</p>
+        <p>hi</p>
+        <p>I'm a secondary school student in sg.</p>
+        <p>Birthday: March 17</p>
+        <p>Favorite Song: "Free Loop"</p>
+        <p>I know a bit of guitar and drums</p>
+        <p>I'm Chinese</p>
     </section>
     <section id="hobbies">
         <h2>My Hobbies</h2>
-        <p>stuff that i do :</p>
-        <ul style="list-style-type:none; padding: 0;">
+        <p>Here are some things I kinda like do:</p>
+        <ul>
             <li>🎸 Playing the guitar</li>
-            <li>🎨 Drawing </li>
-            <li>📚 playing games (sometimes making them)</li>
-            <li>🌿 touching grass</li>
+            <li>🎨 Drawing</li>
+            <li>📚 Playing games (and making them sometimes)</li>
+            <li>🌿 Touching grass</li>
         </ul>
     </section>
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>my phone number (if you want to add me):</p>
-        <p><a href="tel:88649858">88649858</a></p>
+        <p>You can add my phone number:</p>
+        <p><a href="tel:88649858" style="color: #862b29; font-weight: bold;">88649858</a></p>
     </section>
     <footer>
-        <p>&copy; 2025 ME.</p>
+        <p>&copy; 2025 Me. All rights reserved.</p>
     </footer>
-
     <script>
         setTimeout(() => {
             document.getElementById('hello-section').style.display = 'none';
             document.getElementById('about').style.display = 'block'; 
-        }, 10000000);
+        }, 3000);
 
-        // chat gpt wrote this part
         function showSection(sectionId) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
